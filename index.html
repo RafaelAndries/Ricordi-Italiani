@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- head -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ricordi Italiani - Authentic Italian Restaurant">
+  <title>Ricordi Italiani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home-hero" aria-label="Ricordi Italiani">
+        <svg class="brand-icon" viewBox="0 0 120 32" width="120" height="32" aria-hidden="true">
+          <rect width="40" height="32" x="0" y="0" fill="#0f8a5f"></rect>
+          <rect width="40" height="32" x="40" y="0" fill="#ffffff"></rect>
+          <rect width="40" height="32" x="80" y="0" fill="#c0392b"></rect>
+        </svg>
+        <span>Ricordi Italiani</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" id="navToggle">☰</button>
+      <nav id="primary-nav" class="nav">
+        <a href="#home-hero">Home</a>
+        <a href="#categories">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#location">Find Us</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="hero" id="home-hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="container hero-inner">
+      <h1>Benvenuti</h1>
+      <p>Traditional flavors crafted with passion</p>
+      <a href="#categories" class="btn">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- story -->
+  <section id="story" class="story">
+    <div class="container story-inner">
+      <h2>Our Story</h2>
+      <p>We say the story of how we ve done it</p>
+      <p>From a small family kitchen to a cozy corner in Milan, our recipes were handed down at Sunday tables, perfected
+        over years of love and patience. We knead by hand, simmer slow, and taste twice. Every plate is a memory brought
+        to life and shared with you.</p>
+      <p>Flour, water, time, and care are our pillars. We source simple ingredients and let them shine without noise.
+        This is how we ve done it and how we keep doing it, one warm plate at a time.</p>
+    </div>
+  </section>
+
+  <!-- categories -->
+  <main id="categories" class="container categories">
+    <h2>Categories</h2>
+    <div class="grid">
+      <a class="card" href="#pizza" aria-label="Pizza">
+        <div class="flip">
+          <div class="face face-front" style="background-image:url('images/pizza.jpg');"></div>
+          <div class="face face-back"><span>Pizza</span></div>
+        </div>
+      </a>
+      <a class="card" href="#pasta" aria-label="Pasta">
+        <div class="flip">
+          <div class="face face-front" style="background-image:url('images/pasta.jpg');"></div>
+          <div class="face face-back"><span>Pasta</span></div>
+        </div>
+      </a>
+      <a class="card" href="#desserts" aria-label="Desserts">
+        <div class="flip">
+          <div class="face face-front" style="background-image:url('images/dessert.jpg');"></div>
+          <div class="face face-back"><span>Desserts</span></div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- menu -->
+  <section id="menu" class="menu">
+    <div class="container">
+      <h2>Menu</h2>
+
+      <div class="menu-columns">
+        <section id="pizza" class="menu-window">
+          <h3>Pizza</h3>
+          <ul class="menu-list">
+            <li>
+              <details>
+                <summary><span class="item">Margherita</span><span class="dots"></span><span class="price">5€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">San Marzano tomatoes, fior di latte, basil</span><span
+                    class="weight">350g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Diavola</span><span class="dots"></span><span class="price">7€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Tomato sauce, mozzarella, spicy salami,
+                    oregano</span><span class="weight">380g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Quattro Formaggi</span><span class="dots"></span><span
+                    class="price">8€</span></summary>
+                <div class="item-info"><span class="ingredients">Mozzarella, gorgonzola, parmigiano,
+                    provolone</span><span class="weight">360g</span></div>
+              </details>
+            </li>
+          </ul>
+        </section>
+
+        <section id="pasta" class="menu-window">
+          <h3>Pasta</h3>
+          <ul class="menu-list">
+            <li>
+              <details>
+                <summary><span class="item">Spaghetti Carbonara</span><span class="dots"></span><span
+                    class="price">9€</span></summary>
+                <div class="item-info"><span class="ingredients">Guanciale, egg, pecorino romano, black
+                    pepper</span><span class="weight">320g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Cacio e Pepe</span><span class="dots"></span><span class="price">8€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Pecorino romano, black pepper, spaghetti</span><span
+                    class="weight">300g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Pesto Genovese</span><span class="dots"></span><span class="price">9€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Basil pesto, pine nuts, parmigiano, trofie</span><span
+                    class="weight">320g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Aglio e Olio</span><span class="dots"></span><span class="price">7€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Garlic, olive oil, chili flakes, parsley</span><span
+                    class="weight">300g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Lasagna alla Bolognese</span><span class="dots"></span><span
+                    class="price">11€</span></summary>
+                <div class="item-info"><span class="ingredients">Layers of ragù, besciamella, parmigiano</span><span
+                    class="weight">380g</span></div>
+              </details>
+            </li>
+          </ul>
+        </section>
+
+        <section id="desserts" class="menu-window">
+          <h3>Desserts</h3>
+          <ul class="menu-list">
+            <li>
+              <details>
+                <summary><span class="item">Tiramisu</span><span class="dots"></span><span class="price">6€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Mascarpone, espresso, savoiardi, cocoa</span><span
+                    class="weight">180g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Panna Cotta</span><span class="dots"></span><span class="price">5€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Cream, vanilla, berry coulis</span><span
+                    class="weight">160g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Cannoli Siciliani</span><span class="dots"></span><span
+                    class="price">7€</span></summary>
+                <div class="item-info"><span class="ingredients">Ricotta filling, candied orange, pistachio</span><span
+                    class="weight">200g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Affogato</span><span class="dots"></span><span class="price">5€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Vanilla gelato, hot espresso</span><span
+                    class="weight">150g</span></div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><span class="item">Pistachio Gelato</span><span class="dots"></span><span
+                    class="price">4€</span></summary>
+                <div class="item-info"><span class="ingredients">Sicilian pistachios, milk, sugar</span><span
+                    class="weight">140g</span></div>
+              </details>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- location -->
+  <section id="location" class="location">
+    <div class="container">
+      <h2>Find Us</h2>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89492.4414799559!2d9.037772228331708!3d45.497217982247534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1aa5f3e2ba9%3A0x1a7e3c0d7e8bbdbb!2sL&#39;immagine%20Bistrot%20Ristorante!5e0!3m2!1sen!2sro!4v1761143552000!5m2!1sen!2sro"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- reviews -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <h2>Reviews</h2>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <h4>Alessia</h4>
+          <p class="stars">★★★★★</p>
+          <p>Warm atmosphere and a soft crust Margherita with fresh basil that reminded me of Naples. Friendly service
+            and a cozy vibe.</p>
+        </article>
+        <article class="review-card">
+          <h4>Lorenzo</h4>
+          <p class="stars">★★★★★</p>
+          <p>Carbonara with the perfect creaminess from eggs and pecorino, not cream. Guanciale crisped just right. I
+            will return with friends.</p>
+        </article>
+        <article class="review-card">
+          <h4>Giulia</h4>
+          <p class="stars">★★★★★</p>
+          <p>Tiramisu layers were light and balanced. Espresso flavor shines without being too sweet. A lovely end to
+            dinner.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© Ricordi Italiani</p>
+    </div>
+  </footer>
+
+  <!-- audio -->
+  <audio id="bgAudio" preload="none"></audio>
+  <button id="audioToggle" class="audio-btn" aria-label="Play audio">►</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
