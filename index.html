@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 
 <head>
-  <!-- head -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ricordi Italiani - Authentic Italian Restaurant">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ricordi Italiani - Authentic Italian Restaurant" />
   <title>Ricordi Italiani</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css">
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
-<body>
+<body id="top">
+  <!-- header -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#home-hero" aria-label="Ricordi Italiani">
@@ -26,21 +27,25 @@
         </svg>
         <span>Ricordi Italiani</span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" id="navToggle">☰</button>
+
       <nav id="primary-nav" class="nav">
         <a href="#home-hero">Home</a>
         <a href="#categories">Menu</a>
         <a href="#story">Story</a>
         <a href="#location">Find Us</a>
         <a href="#reviews">Reviews</a>
+        <a href="#comments">Comments</a>
       </nav>
+
+      <!-- burger -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" id="navToggle">☰</button>
     </div>
   </header>
 
   <!-- hero -->
   <section class="hero" id="home-hero">
     <video class="hero-video" autoplay muted loop playsinline preload="metadata">
-      <source src="video/hero.mp4" type="video/mp4">
+      <source src="video/hero.mp4" type="video/mp4" />
     </video>
     <div class="container hero-inner">
       <h1>Benvenuti</h1>
@@ -66,22 +71,28 @@
   <main id="categories" class="container categories">
     <h2>Categories</h2>
     <div class="grid">
-      <a class="card" href="#pizza" aria-label="Pizza">
+      <a class="card" href="#pizza">
         <div class="flip">
           <div class="face face-front" style="background-image:url('images/pizza.jpg');"></div>
           <div class="face face-back"><span>Pizza</span></div>
         </div>
       </a>
-      <a class="card" href="#pasta" aria-label="Pasta">
+      <a class="card" href="#pasta">
         <div class="flip">
           <div class="face face-front" style="background-image:url('images/pasta.jpg');"></div>
           <div class="face face-back"><span>Pasta</span></div>
         </div>
       </a>
-      <a class="card" href="#desserts" aria-label="Desserts">
+      <a class="card" href="#desserts">
         <div class="flip">
           <div class="face face-front" style="background-image:url('images/dessert.jpg');"></div>
           <div class="face face-back"><span>Desserts</span></div>
+        </div>
+      </a>
+      <a class="card" href="#drinks">
+        <div class="flip">
+          <div class="face face-front" style="background-image:url('images/drinks.jpg');"></div>
+          <div class="face face-back"><span>Drinks</span></div>
         </div>
       </a>
     </div>
@@ -214,6 +225,60 @@
             </li>
           </ul>
         </section>
+        <section id="drinks" class="menu-window">
+          <h3>Drinks</h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <details>
+                <summary><span class="item">Espresso</span><span class="dots"></span><span class="price">2€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Italian espresso</span><span class="weight">30ml</span>
+                </div>
+              </details>
+            </li>
+            <li class="menu-item">
+              <details>
+                <summary><span class="item">Cappuccino</span><span class="dots"></span><span class="price">3€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Espresso, steamed milk, foam</span><span
+                    class="weight">200ml</span></div>
+              </details>
+            </li>
+            <li class="menu-item">
+              <details>
+                <summary><span class="item">Latte</span><span class="dots"></span><span class="price">3.5€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Espresso, steamed milk</span><span
+                    class="weight">250ml</span></div>
+              </details>
+            </li>
+            <li class="menu-item">
+              <details>
+                <summary><span class="item">Limoncello</span><span class="dots"></span><span class="price">5€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Lemon liqueur, served cold</span><span
+                    class="weight">50ml</span></div>
+              </details>
+            </li>
+            <li class="menu-item">
+              <details>
+                <summary><span class="item">San Pellegrino</span><span class="dots"></span><span
+                    class="price">2.5€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Sparkling mineral water</span><span
+                    class="weight">500ml</span></div>
+              </details>
+            </li>
+            <li class="menu-item">
+              <details>
+                <summary><span class="item">Prosecco</span><span class="dots"></span><span class="price">6€</span>
+                </summary>
+                <div class="item-info"><span class="ingredients">Italian sparkling wine</span><span
+                    class="weight">150ml</span></div>
+              </details>
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
   </section>
@@ -224,8 +289,8 @@
       <h2>Find Us</h2>
       <div class="map-wrap">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89492.4414799559!2d9.037772228331708!3d45.497217982247534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1aa5f3e2ba9%3A0x1a7e3c0d7e8bbdbb!2sL&#39;immagine%20Bistrot%20Ristorante!5e0!3m2!1sen!2sro!4v1761143552000!5m2!1sen!2sro"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89492.4414799559!2d9.037772228331708!3d45.497217982247534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1aa5f3e2ba9%3A0x1a7e3c0d7e8bbdbb!2sL%27immagine%20Bistrot%20Ristorante!5e0!3m2!1sen!2sro!4v1761143552000!5m2!1sen!2sro"
+          width="600" height="450" style="border:0" allowfullscreen loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
@@ -239,22 +304,35 @@
         <article class="review-card">
           <h4>Alessia</h4>
           <p class="stars">★★★★★</p>
-          <p>Warm atmosphere and a soft crust Margherita with fresh basil that reminded me of Naples. Friendly service
-            and a cozy vibe.</p>
+          <p>Warm atmosphere and a soft crust Margherita.</p>
         </article>
         <article class="review-card">
           <h4>Lorenzo</h4>
           <p class="stars">★★★★★</p>
-          <p>Carbonara with the perfect creaminess from eggs and pecorino, not cream. Guanciale crisped just right. I
-            will return with friends.</p>
+          <p>Carbonara with the perfect creaminess.</p>
         </article>
         <article class="review-card">
           <h4>Giulia</h4>
           <p class="stars">★★★★★</p>
-          <p>Tiramisu layers were light and balanced. Espresso flavor shines without being too sweet. A lovely end to
-            dinner.</p>
+          <p>Tiramisu layers were light and balanced.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- comments -->
+  <section id="comments" class="comments-section">
+    <div class="container">
+      <h2>Comments</h2>
+      <form id="commentForm" class="comments-form" autocomplete="off">
+        <div class="form-row">
+          <input id="cName" name="name" type="text" placeholder="Name" required maxlength="60" />
+          <input id="cTitle" name="title" type="text" placeholder="Title" required maxlength="120" />
+        </div>
+        <textarea id="cBody" name="body" rows="4" placeholder="Your comment" required maxlength="1000"></textarea>
+        <button type="submit" class="btn c-submit">Post</button>
+      </form>
+      <div id="commentsList" class="comments-list"></div>
     </div>
   </section>
 
@@ -265,11 +343,8 @@
     </div>
   </footer>
 
-  <!-- audio -->
-  <audio id="bgAudio" preload="none"></audio>
-  <button id="audioToggle" class="audio-btn" aria-label="Play audio">►</button>
-
-  <script src="script.js"></script>
+  <!-- Daca chiar cititi asta, am scapat de audio -->
+  <script type="module" src="js/site.js"></script>
 </body>
 
 </html>

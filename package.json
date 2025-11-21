@@ -1,0 +1,12 @@
+{
+  "name": "ricordi-italiani",
+  "version": "1.0.0",
+  "description": "Ricordi Italiani",
+  "type": "module",
+  "scripts": {
+    "server": "json-server --watch data/db.json --port 3001"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}
