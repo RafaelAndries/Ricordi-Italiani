@@ -26,7 +26,6 @@ async function edit_comment(id, data) {
 async function delete_comment(id) {
   await fetch(`${API_ROOT}/${id}`, { method: "DELETE" });
 }
-
 function setupNav() {
   const nav = document.getElementById("primary-nav");
   const btn = document.getElementById("navToggle");
@@ -35,7 +34,6 @@ function setupNav() {
     nav.classList.toggle("open");
   });
 }
-
 let comments = [];
 
 function show_comments() {
@@ -43,58 +41,49 @@ function show_comments() {
   if (!list) return;
   list.innerHTML = "";
 
-  if (!comments.length) {
-    const p = document.createElement("p");
-    p.textContent = "No comments yet.";
-    list.appendChild(p);
-    return;
-  }
-
   comments.forEach((item) => {
     const card = document.createElement("div");
     card.className = "comment-card";
     card.dataset.id = item.id;
 
-    const titleEl = document.createElement("h4");
-    titleEl.textContent = item.title;
+    const titleElement = document.createElement("h4");
+    titleElement.textContent = item.title;
 
-    const metaEl = document.createElement("div");
-    metaEl.className = "meta c-meta";
-    metaEl.textContent = `by ${item.name}`;
+    const authorElement = document.createElement("div");
+    authorElement.className = "author";
+    authorElement.textContent = "by " + item.name;
 
-    const bodyEl = document.createElement("div");
-    bodyEl.className = "body c-body";
-    bodyEl.textContent = item.body;
+    const bodyElement = document.createElement("div");
+    bodyElement.className = "body c-body";
+    bodyElement.textContent = item.body;
 
-    const actionsEl = document.createElement("div");
-    actionsEl.className = "actions c-actions";
+    const actionsElement = document.createElement("div");
+    actionsElement.className = "actions c-actions";
 
-    const editBtn = document.createElement("button");
-    editBtn.className = "edit";
-    editBtn.textContent = "Edit";
-    editBtn.addEventListener("click", async () => {
+    const editButton = document.createElement("button");
+    editButton.className = "edit";
+    editButton.textContent = "Edit";
+    editButton.addEventListener("click", async () => {
       const newBody = prompt("Edit comment:", item.body);
       if (newBody == null) return;
-      const updated = await edit_comment(item.id, { body: newBody.trim() });
+      const updated = await edit_comment(item.id, { body: newBody });
       if (updated) {
         item.body = updated.body;
         show_comments();
       }
     });
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.className = "delete";
-    deleteBtn.textContent = "Delete";
-    deleteBtn.addEventListener("click", async () => {
-      const ok = confirm("Delete this comment?");
-      if (!ok) return;
+    const deleteButton = document.createElement("button");
+    deleteButton.className = "delete";
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", async () => {
       await delete_comment(item.id);
       comments = comments.filter((x) => x.id !== item.id);
       show_comments();
     });
 
-    actionsEl.append(editBtn, deleteBtn);
-    card.append(titleEl, metaEl, bodyEl, actionsEl);
+    actionsElement.append(editButton, deleteButton);
+    card.append(titleElement, authorElement, bodyElement, actionsElement);
     list.appendChild(card);
   });
 }
@@ -108,9 +97,9 @@ async function setup_comments() {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const name = document.getElementById("cName").value.trim();
-    const title = document.getElementById("cTitle").value.trim();
-    const body = document.getElementById("cBody").value.trim();
+    const name = document.getElementById("cName").value;
+    const title = document.getElementById("cTitle").value;
+    const body = document.getElementById("cBody").value;
     if (!name || !title || !body) return;
 
     const created = await post_comment({ name, title, body });
@@ -125,6 +114,8 @@ async function setup_comments() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  setupNav();
   await setup_comments();
+  setupNav();
 });
+
+/* For future i need to fix the long comment overflow */

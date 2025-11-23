@@ -4,7 +4,7 @@
   --color-accent: #c0392b;
   --color-bg: #f6f6f6;
   --color-surface: #ffffff;
-  --color-text: #111111;
+  --color-text: #5e5e5e;
   --color-muted: #666666;
   --color-line: #e5e5e5;
 }
@@ -37,7 +37,6 @@ h2 {
 
 /* container */
 .container {
-  max-width: 1200px;
   margin-left: 16%;
   margin-right: 16%;
 }
