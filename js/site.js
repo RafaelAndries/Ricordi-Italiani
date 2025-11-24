@@ -4,6 +4,7 @@ async function get_comments() {
   const r = await fetch(API_ROOT);
   if (!r.ok) return [];
   return r.json();
+  preventDefault();
 }
 async function post_comment(data) {
   const r = await fetch(API_ROOT, {
@@ -49,10 +50,6 @@ function show_comments() {
     const titleElement = document.createElement("h4");
     titleElement.textContent = item.title;
 
-    const authorElement = document.createElement("div");
-    authorElement.className = "author";
-    authorElement.textContent = "by " + item.name;
-
     const bodyElement = document.createElement("div");
     bodyElement.className = "body c-body";
     bodyElement.textContent = item.body;
@@ -83,9 +80,10 @@ function show_comments() {
     });
 
     actionsElement.append(editButton, deleteButton);
-    card.append(titleElement, authorElement, bodyElement, actionsElement);
+    card.append(titleElement, bodyElement, actionsElement);
     list.appendChild(card);
   });
+  preventDefault();
 }
 
 async function setup_comments() {
@@ -109,6 +107,7 @@ async function setup_comments() {
       document.getElementById("cTitle").value = "";
       document.getElementById("cBody").value = "";
       show_comments();
+      preventDefault();
     }
   });
 }
